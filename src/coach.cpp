@@ -58,6 +58,16 @@ std::optional<TaskStatus> change_status(std::string_view s) {
     return std::nullopt;
 }
 
+/// Text on one line, its lines joined (a list stays a list), cut at `max`: a plan note is one
+/// line, and the first line of a verdict is often only "three things:".
+std::string flat(std::string_view text, std::size_t max) {
+    std::string out;
+    for (const auto& l : split_lines(text))
+        if (!trim(l).empty()) out += (out.empty() ? "" : " ") + std::string(trim(l));
+    if (out.size() > max) out = out.substr(0, max) + " [...]";
+    return out;
+}
+
 std::string last_body(std::string_view text, std::string_view tag) {
     auto bs = report_blocks(text, tag);
     return bs.empty() ? std::string() : bs.back().body;
@@ -792,28 +802,28 @@ bool Coach::accept_one(CoachStep& s, CoachState& st, const CoachOptions& o, cons
             }));
             if (*v.accept) {
                 ed.set_status(*r, TaskStatus::Completed);
-                ed.add_note(*r, "Accepted by the Gatekeeper " + g + " " + date + ": " + first_line(v.text, 400));
+                ed.add_note(*r, "Accepted by the Gatekeeper " + g + " " + date + ": " + flat(v.text, 1200));
                 out.plan_changes.push_back("accepted: status → " + status_label(TaskStatus::Completed));
-                st.news.push_back("^" + id + " accepted by the Gatekeeper: " + first_line(v.text, 400));
+                st.news.push_back("^" + id + " accepted by the Gatekeeper: " + flat(v.text, 1200));
                 ++st.urgent;
             } else if (sent_back + 1 > project_.config().coach.max_rejections) {
                 BlockerReport b;
                 b.kind = BlockerReport::Kind::Member;
                 b.to = coach_->handle;
                 b.text = "Decide on ^" + id + ": the Gatekeeper sent it back " + std::to_string(sent_back + 1) +
-                         " times. Last: " + first_line(v.text, 600);
+                         " times. Last: " + flat(v.text, 1800);
                 BlockerEdits be = record_blockers(now, ed, *r, *gatekeeper_, team_, {b}, "");
                 out.plan_changes.insert(out.plan_changes.end(), be.changes.begin(), be.changes.end());
                 ++st.urgent;
                 st.news.push_back("^" + id + " sent back " + std::to_string(sent_back + 1) +
-                                  " times by the Gatekeeper: it waits for your decision. " + first_line(v.text, 400));
+                                  " times by the Gatekeeper: it waits for your decision. " + flat(v.text, 1200));
             } else {
                 ed.set_status(*r, TaskStatus::Pending);
-                ed.add_note(*r, "Sent back by the Gatekeeper " + g + " " + date + ": " + first_line(v.text, 800));
+                ed.add_note(*r, "Sent back by the Gatekeeper " + g + " " + date + ": " + flat(v.text, 2400));
                 out.plan_changes.push_back("sent back: status → " + status_label(TaskStatus::Pending));
                 ++st.urgent;
                 st.news.push_back("^" + id + " sent back to @" + (expert ? expert->handle : std::string("?")) +
-                                  " by the Gatekeeper: " + first_line(v.text, 400));
+                                  " by the Gatekeeper: " + flat(v.text, 1200));
             }
             std::vector<std::string> added;
             for (const std::string& f : out.report.findings) {

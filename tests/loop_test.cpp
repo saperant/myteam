@@ -53,7 +53,7 @@ struct Fixture {
 
     explicit Fixture(const std::string& plan) {
         dir.write("team/team.md", "---\nid: t\nname: T\nfacilitator: po\nrepairer: dev\nmodels: {default: claude:sonnet, premium: claude:opus}\n"
-                                  "allocation:\n  keywords: {test: qa}\n---\n");
+                                  "---\n");
         dir.write("team/members/po.md", "---\nname: Po\nrole: product-owner\n---\nPrioritize.\n");
         dir.write("team/members/dev.md", "---\nname: Dev\nrole: developer\nhandoffs:\n  - when: done\n    to: qa\n---\nCode.\n");
         dir.write("team/members/qa.md", "---\nname: Qa\nrole: tester\n---\nTest.\n");

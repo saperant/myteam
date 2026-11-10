@@ -1,8 +1,8 @@
-// Teams: members, roles, prompts, models, handoffs and allocation rules.
+// Teams: members, roles, prompts, models and handoffs.
 //
 // A team is a directory:
 //
-//   team.md            front matter: id, name, product_owner, steward, allocation, ...
+//   team.md            front matter: id, name, coach, gatekeeper, product_owner, models, ...
 //                      body: the team overview
 //   members/<h>.md     front matter: name, role, skills, models, handoffs
 //                      body: the member's role prompt
@@ -68,22 +68,6 @@ struct Member {
     std::filesystem::path source;
 };
 
-struct AllocationWeights {
-    int priority = 4;
-    int deadline = 3;
-    int blocker = 5;
-    int skill = 3;
-    int workload = 2;
-};
-
-struct AllocationRules {
-    /// Plan assignee words ("@qa", "@backend") that stand for a member.
-    std::vector<std::pair<std::string, std::string>> roles;
-    /// Words in task text that point to a member.
-    std::vector<std::pair<std::string, std::string>> keywords;
-    AllocationWeights weights;
-};
-
 /// Team Topologies' four team types (team.md `topology:`).
 inline constexpr const char* kTopologies[] = {"stream-aligned", "platform", "complicated-subsystem", "enabling"};
 
@@ -105,16 +89,12 @@ struct Team {
     /// Member handle: the customer's counterpart, owns the backlog, allocates
     /// work in `direct`. Read from product_owner: (or the older facilitator:).
     std::string product_owner;
-    /// Member handle of the methodology's steward (Scrum Master, ...); empty:
-    /// the methodology's built-in steward.
-    std::string steward;
     std::string repairer;     ///< member handle that repairs a broken plan
     /// methodology: coach. The coach decides and assigns (the customer's contact: also the
     /// product owner); the Gatekeeper checks every decision and every acceptance.
     std::string coach;
     std::string gatekeeper;
     std::vector<Member> members;
-    AllocationRules allocation;
     std::filesystem::path dir;
     std::filesystem::path overlay;  ///< empty when the project has none
 

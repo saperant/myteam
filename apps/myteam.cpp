@@ -82,7 +82,7 @@ struct Args {
     std::string team;
     std::vector<std::string> positional;
     std::vector<std::string> hide;  ///< guard: paths the agent may not read
-    std::string member, task, runner, topic, thread, output, steward, run_dir, note, hold, report;
+    std::string member, task, runner, topic, thread, output, run_dir, note, hold, report;
     int iterations = 1, max = 0, from = 0;
     bool json = false, commits = false, services = false, purge = false, force = false, all = false, serve = false, drafts = false, no_hugo = false, export_ = false, interactive = false, dry_run = false, quiet = false, later = false, no_po = false, declined = false;
 };
@@ -134,14 +134,12 @@ Args parse_args(int argc, char** argv) {
         else if (s == "--export") a.export_ = true;
         else if (s == "-o" || s == "--output") a.output = value(i);
         else if (s == "--no-po") a.no_po = true;
-        else if (s == "--steward") a.steward = value(i);
         else if (s == "--run-dir") a.run_dir = value(i);
         else if (s == "--hide") a.hide.push_back(value(i));
         else if (s == "--hold") a.hold = value(i);
         else if (s == "--report") a.report = value(i);
         else if (s == "--json") a.json = true;
         else if (s == "--note" || s == "--check") a.note = value(i);
-        else if (s == "--no-steward") a.steward = "off";
         else if (s == "-n" || s == "--iterations") a.iterations = number(i);
         else if (s == "--max") a.max = number(i);
         else if (s == "--from") a.from = number(i);

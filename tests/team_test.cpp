@@ -11,7 +11,7 @@ namespace {
 void write_small_team(const TempDir& d, const std::string& dir = "team") {
     d.write(dir + "/team.md",
             "---\nid: small\nname: Small\nproduct_owner: po\nmodels:\n  default: claude:sonnet\n  economy: vibe\n"
-            "allocation:\n  roles: {qa: tess}\n  keywords: {test: tess, api: dev}\n---\n\nA small team.\n");
+            "---\n\nA small team.\n");
     d.write(dir + "/members/po.md", "---\nname: Owner\nrole: product-owner\n---\nPrioritize.\n");
     d.write(dir + "/members/dev.md",
             "---\nname: Dev\nrole: developer\nsummary: writes code\nskills: [cpp]\n"

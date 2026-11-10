@@ -973,7 +973,7 @@ IterationResult Loop::task_round(const LoopOptions& o) {
         return res;
     }
 
-    // Give each task an id to track it by, and record the allocation.
+    // Give each task an id to track it by.
     std::vector<std::string> ids;
     {
         PlanEditor ed(plan);

@@ -509,3 +509,20 @@ TEST(CoachStep, RoutineNewsWaitsAndDocsAreCheckedLighter) {
     c.step();
     EXPECT_NE(model_of("coach"), "<none>");
 }
+
+TEST(CoachStep, AVerdictListReachesTheNoteWhole) {
+    Crew c("---\nproject: p\n---\n\n## Work\n\n- [ ] Draw it @designer ^draw\n  - ( ) It exists\n");
+    c.respond = [&](const RunRequest& r) -> std::string {
+        if (r.what == "^draw") return "<task_status>done</task_status><work_summary>drew it</work_summary>";
+        if (r.what == "gate:^draw") return "<verdict status=\"reject\">Three things:\n(1) one\n(2) two\n(3) three</verdict>";
+        if (r.what == "coach") return "Fine.";
+        return "FAIL";
+    };
+    c.step();
+    const Plan p = c.plan();
+    const TaskRef* t = p.by_id("draw");
+    ASSERT_NE(t, nullptr) << p.text();
+    ASSERT_FALSE(t->task->notes.empty()) << p.text();
+    const std::string note = t->task->notes.back();
+    EXPECT_NE(note.find("Three things: (1) one (2) two (3) three"), std::string::npos) << note;
+}

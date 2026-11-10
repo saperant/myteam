@@ -37,7 +37,7 @@ struct DispatchPlan {
     std::string description;
     const Member* member = nullptr;
     ModelRef model;
-    std::string reason;  ///< "assigned", or the product owner's allocation reason
+    std::string reason;  ///< why it runs ("assigned", "acceptance", ...)
     AgentContext context;
     taskml::TaskStatus previous_status = taskml::TaskStatus::Pending;  ///< before the run marked it [~]
     std::optional<std::string> resume_session;  ///< continue a run stopped at a limit

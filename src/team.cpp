@@ -98,12 +98,6 @@ Member load_member(const fs::path& file, const std::optional<ModelProfile>& team
     return member;
 }
 
-std::vector<std::pair<std::string, std::string>> word_map(const yaml::Node& n) {
-    std::vector<std::pair<std::string, std::string>> out;
-    for (const auto& [k, v] : n.entries()) out.emplace_back(lower(k), normalize_handle(v.text()));
-    return out;
-}
-
 // The file to read for `rel`: the overlay's when present.
 fs::path pick(const fs::path& dir, const fs::path& overlay, const fs::path& rel) {
     if (!overlay.empty() && fs::exists(overlay / rel)) return overlay / rel;
@@ -131,7 +125,6 @@ Team load_team(const fs::path& dir, const fs::path& overlay) {
         team.name = t.get("name", team.id);
         team.overview = std::string(trim(tf.body));
         team.product_owner = normalize_handle(t.get("product_owner", t.get("facilitator")));
-        team.steward = normalize_handle(t.get("steward"));
         team.repairer = normalize_handle(t.get("repairer"));
         team.coach = normalize_handle(t.get("coach"));
         team.gatekeeper = normalize_handle(t.get("gatekeeper"));
@@ -147,16 +140,6 @@ Team load_team(const fs::path& dir, const fs::path& overlay) {
         std::optional<ModelProfile> team_models;
         if (t.has("models")) team_models = parse_models(t["models"], team_file);
 
-        const yaml::Node& a = t["allocation"];
-        team.allocation.roles = word_map(a["roles"]);
-        team.allocation.keywords = word_map(a["keywords"]);
-        const yaml::Node& w = a["weights"];
-        AllocationWeights& wt = team.allocation.weights;
-        wt.priority = static_cast<int>(w.get_int("priority", wt.priority));
-        wt.deadline = static_cast<int>(w.get_int("deadline", wt.deadline));
-        wt.blocker = static_cast<int>(w.get_int("blocker", wt.blocker));
-        wt.skill = static_cast<int>(w.get_int("skill", wt.skill));
-        wt.workload = static_cast<int>(w.get_int("workload", wt.workload));
 
         // Members: base files, replaced or extended by the overlay. The order
         // follows team.md's members: list when given, then file names.
@@ -187,14 +170,11 @@ Team load_team(const fs::path& dir, const fs::path& overlay) {
         if (!handle.empty() && !team.find(handle)) fail(file, what + ": no member \"" + handle + "\"");
     };
     check(team.product_owner, "product_owner", team_file);
-    check(team.steward, "steward", team_file);
     check(team.repairer, "repairer", team_file);
     check(team.coach, "coach", team_file);
     check(team.gatekeeper, "gatekeeper", team_file);
     if (team.product_owner.empty() && !team.coach.empty()) team.product_owner = team.coach;
     if (team.product_owner.empty()) team.product_owner = team.members.front().handle;
-    for (const auto& [word, h] : team.allocation.roles) check(h, "allocation.roles." + word, team_file);
-    for (const auto& [word, h] : team.allocation.keywords) check(h, "allocation.keywords." + word, team_file);
     for (const Member& m : team.members)
         for (const HandoffRule& r : m.handoffs) check(r.to, "handoffs", m.source);
     return team;

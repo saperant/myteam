@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    # myteam and myorg (with tasks/, the plan parser, built in), the unit tests, and the workbench plugins
+    # against the built tools and myrcp from PyPI.
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - name: Dependencies
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q --no-install-recommends cmake ninja-build g++ libgtest-dev
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Build
+        run: |
+          cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo
+          cmake --build build
+      - name: Unit tests
+        run: ctest --test-dir build --output-on-failure
+      - name: The workbench plugins (myrcp from PyPI)
+        run: |
+          python -m venv .venv
+          .venv/bin/pip install --quiet "./ui[test]"
+          cd ui && MYTEAM=$PWD/../build/myteam MYORG=$PWD/../build/myorg ../.venv/bin/pytest -q -rs
+          XDG_STATE_HOME=$RUNNER_TEMP ../.venv/bin/myteam-ui --list

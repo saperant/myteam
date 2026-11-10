@@ -1,0 +1,256 @@
+[plugin]
+id = "myteam"
+name = "myteam"
+module = "myrcp_myteam.plugin"
+
+# Watch the crew (myteam's coach methodology) work, and be its customer and operator: the
+# coach decides, the Gatekeeper checks, the experts work in their units. The views read
+# `myteam json`; the project is the nearest directory with .myteam/ from the working
+# directory up, or the preference.
+
+[[preferences]]
+id = "project"
+title = "Project"
+type = "string"
+env = "MYTEAM_PROJECT"
+description = "The myteam project's directory. Empty: the nearest directory with .myteam/ from the working directory up."
+
+[[preferences]]
+id = "command"
+title = "myteam command"
+type = "string"
+env = "MYTEAM"
+description = "The myteam executable. Empty: myteam on $PATH, else the build/ of the myteam checkout this comes from (an editable install)."
+
+# ---- views ----------------------------------------------------------------------
+
+[[views]]
+id = "myteam.overview"
+title = "myteam"
+
+[[views]]
+id = "myteam.plan"
+title = "Plan"
+
+[[views]]
+id = "myteam.runs"
+title = "Runs"
+
+[[views]]
+id = "myteam.run"  # myteam.run#<run directory name>
+title = "Run"
+
+[[views]]
+id = "myteam.customer"
+title = "Customer"
+
+[[views]]
+id = "myteam.coach"
+title = "Coach"
+
+[[views]]
+id = "myteam.council"
+title = "Council"
+
+[[views]]
+id = "myteam.feedback"
+title = "Feedback for myteam"
+
+[[views]]
+id = "myteam.team"
+title = "Crew"
+region = "side"
+
+[[views]]
+id = "myteam.activity"
+title = "Activity"
+region = "bottom"
+
+[[views]]
+id = "myteam.skills"
+title = "Skills"
+
+[[views]]
+id = "myteam.projects"
+title = "myteam projects"
+
+[[views]]
+id = "myteam.done"
+title = "Mark done"
+
+[[views]]
+id = "myteam.undo"
+title = "Undo a run"
+
+# What the crew does: the overview, the plan, the runs, you and the coach, the coach's desk;
+# who is doing it at the side; what happened and what is wrong below. Perspective: myteam (Ctrl+P).
+[[perspectives]]
+id = "myteam"
+title = "myteam"
+main = ["myteam.overview", "myteam.plan", "myteam.runs", "myteam.customer", "myteam.coach", "myteam.council", "myteam.skills"]
+side = ["myteam.team", "properties"]
+bottom = ["myteam.activity", "problems"]
+side_size = 34
+bottom_size = 30
+
+# ---- palette ----------------------------------------------------------------------
+
+[[commands]]
+id = "myteam.show"
+title = "myteam: Overview"
+
+[[commands]]
+id = "myteam.project.choose"
+title = "myteam: Choose the project"
+
+[[commands]]
+id = "myteam.view.plan"
+title = "myteam: Plan"
+
+[[commands]]
+id = "myteam.view.team"
+title = "myteam: Crew"
+
+[[commands]]
+id = "myteam.view.runs"
+title = "myteam: Runs"
+
+[[commands]]
+id = "myteam.view.customer"
+title = "myteam: Customer (talk to the coach)"
+
+[[commands]]
+id = "myteam.view.coach"
+title = "myteam: Coach (the coach's desk, the Gatekeeper's objections)"
+
+[[commands]]
+id = "myteam.view.council"
+title = "myteam: Council (the experts' views)"
+
+[[commands]]
+id = "myteam.view.feedback"
+title = "myteam: Feedback for myteam"
+
+[[commands]]
+id = "myteam.view.activity"
+title = "myteam: Activity"
+
+[[commands]]
+id = "myteam.view.skills"
+title = "myteam: Skills (what the crew learned)"
+
+[[commands]]
+id = "myteam.run.step"
+title = "myteam: Run a step"
+
+[[commands]]
+id = "myteam.run.steps"
+title = "myteam: Run five steps"
+
+[[commands]]
+id = "myteam.digest"
+title = "myteam: What the coach reads (the digest)"
+
+# ---- in the views -----------------------------------------------------------------
+
+[[commands]]
+id = "myteam.overview.step"
+title = "View: Run a step"
+key = "r"
+view = "myteam.overview"
+
+[[commands]]
+id = "myteam.overview.steps"
+title = "View: Run five steps"
+key = "R"
+view = "myteam.overview"
+
+[[commands]]
+id = "myteam.overview.talk"
+title = "View: Talk to the coach"
+key = "t"
+view = "myteam.overview"
+
+[[commands]]
+id = "myteam.overview.digest"
+title = "View: What the coach reads"
+key = "d"
+view = "myteam.overview"
+
+[[commands]]
+id = "myteam.plan.done"
+title = "View: Mark an @operator task done"
+key = "d"
+view = "myteam.plan"
+
+[[commands]]
+id = "myteam.plan.decline"
+title = "View: Decline an @operator task, with the reason"
+key = "D"
+view = "myteam.plan"
+
+[[commands]]
+id = "myteam.plan.hideDone"
+title = "View: Hide or show finished tasks"
+key = "h"
+view = "myteam.plan"
+
+[[commands]]
+id = "myteam.runs.kind"
+title = "View: Next kind of run"
+key = "k"
+view = "myteam.runs"
+
+[[commands]]
+id = "myteam.runs.undo"
+title = "View: Undo the run"
+key = "u"
+view = "myteam.runs"
+
+[[commands]]
+id = "myteam.run.prompt"
+title = "View: The prompt the agent got"
+key = "p"
+view = "myteam.run"
+
+[[commands]]
+id = "myteam.run.result"
+title = "View: The agent's final message"
+key = "o"
+view = "myteam.run"
+
+[[commands]]
+id = "myteam.customer.step"
+title = "View: Run a step (the coach answers)"
+key = "ctrl+r"
+view = "myteam.customer"
+
+[[commands]]
+id = "myteam.coach.digest"
+title = "View: What the coach reads"
+key = "d"
+view = "myteam.coach"
+
+[[commands]]
+id = "myteam.coach.step"
+title = "View: Run a step"
+key = "r"
+view = "myteam.coach"
+
+[[commands]]
+id = "myteam.coach.council"
+title = "View: The councils"
+key = "c"
+view = "myteam.coach"
+
+[[commands]]
+id = "myteam.team.memory"
+title = "View: The member's memory"
+key = "m"
+view = "myteam.team"
+
+[[commands]]
+id = "myteam.team.prompt"
+title = "View: The member's role prompt"
+key = "e"
+view = "myteam.team"

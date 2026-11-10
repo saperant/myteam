@@ -1,0 +1,142 @@
+[plugin]
+id = "myorg"
+name = "myorg"
+module = "myrcp_myorg.plugin"
+
+# Watch one crew work across an org's units (myorg), and run it. The views read
+# `myorg json`; the org is the nearest directory with ORG.md and .myorg/ from the
+# working directory up, or the preference. The crew's work opens in the myteam views.
+
+[[preferences]]
+id = "org"
+title = "Org"
+type = "string"
+env = "MYORG_DIR"
+description = "The org's directory (ORG.md, .myorg/). Empty: the nearest one from the working directory up."
+
+[[preferences]]
+id = "command"
+title = "myorg command"
+type = "string"
+env = "MYORG"
+description = "The myorg executable. Empty: myorg on $PATH, else the build/ of the myteam checkout this comes from (an editable install)."
+
+# ---- views ----------------------------------------------------------------------
+
+[[views]]
+id = "myorg.overview"
+title = "Org"
+
+[[views]]
+id = "myorg.topology"
+title = "Topology"
+
+[[views]]
+id = "myorg.units"
+title = "Units"
+region = "side"
+
+[[views]]
+id = "myorg.activity"
+title = "Org activity"
+region = "bottom"
+
+[[views]]
+id = "myorg.orgs"
+title = "Orgs"
+
+# The org, its units and what each sees; the ticks below. Perspective: myorg (Ctrl+P).
+[[perspectives]]
+id = "myorg"
+title = "myorg"
+main = ["myorg.overview", "myorg.topology"]
+side = ["myorg.units", "properties"]
+bottom = ["myorg.activity", "problems"]
+side_size = 32
+bottom_size = 30
+
+# ---- palette ----------------------------------------------------------------------
+
+[[commands]]
+id = "myorg.show"
+title = "myorg: Org"
+
+[[commands]]
+id = "myorg.org.choose"
+title = "myorg: Choose the org"
+
+[[commands]]
+id = "myorg.view.topology"
+title = "myorg: Topology"
+
+[[commands]]
+id = "myorg.view.activity"
+title = "myorg: Org activity"
+
+[[commands]]
+id = "myorg.tick"
+title = "myorg: One tick"
+
+[[commands]]
+id = "myorg.run"
+title = "myorg: Run until it needs me"
+
+[[commands]]
+id = "myorg.stop"
+title = "myorg: Stop after this tick"
+
+[[commands]]
+id = "myorg.sync"
+title = "myorg: Sync with ORG.md"
+
+[[commands]]
+id = "myorg.talk"
+title = "myorg: Talk to the coach"
+
+[[commands]]
+id = "myorg.crew"
+title = "myorg: The crew's work (myteam views)"
+
+# ---- in the views -----------------------------------------------------------------
+
+[[commands]]
+id = "myorg.overview.tick"
+title = "View: One tick"
+key = "t"
+view = "myorg.overview"
+
+[[commands]]
+id = "myorg.overview.run"
+title = "View: Run until it needs me"
+key = "r"
+view = "myorg.overview"
+
+[[commands]]
+id = "myorg.overview.stop"
+title = "View: Stop after this tick"
+key = "x"
+view = "myorg.overview"
+
+[[commands]]
+id = "myorg.overview.sync"
+title = "View: Sync with ORG.md"
+key = "s"
+view = "myorg.overview"
+
+[[commands]]
+id = "myorg.overview.edit"
+title = "View: Edit ORG.md"
+key = "e"
+view = "myorg.overview"
+
+[[commands]]
+id = "myorg.overview.crew"
+title = "View: The crew's work"
+key = "w"
+view = "myorg.overview"
+
+[[commands]]
+id = "myorg.topology.edit"
+title = "View: Edit ORG.md"
+key = "e"
+view = "myorg.topology"

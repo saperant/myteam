@@ -1,0 +1,7 @@
+# myteam and myorg in the myrcp workbench (https://github.com/saperant/myrcp), started by
+# `myteam-ui`.
+[product]
+id = "myteam"
+name = "myteam"
+version = "0.1.0"
+plugins = ["plugins"]

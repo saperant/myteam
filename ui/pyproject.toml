@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "myteam-ui"
+version = "0.1.0"
+description = "myteam and myorg in the myrcp workbench: watch the crew, talk to the coach, run the org"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["../LICENSE"]
+authors = [{ name = "Saku Rantamäki" }]
+dependencies = [
+    "myrcp>=0.9.1",  # the workbench, from PyPI
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+myteam-ui = "myteam_ui:main"
+
+[project.urls]
+Homepage = "https://github.com/saperant/myteam"
+Issues = "https://github.com/saperant/myteam/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["myteam_ui"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+# The myrcp product: its manifest and the plugins, which the plugin host imports from
+# their directories (not as subpackages of myteam_ui).
+[tool.setuptools.package-data]
+"myteam_ui" = ["product.toml", "plugins/*/myrcp.toml", "plugins/*/*/*.py"]

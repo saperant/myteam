@@ -90,9 +90,12 @@ TEST(OrgViews, BoundariesFollowTheInteractions) {
     EXPECT_NE(std::find(api.hide.begin(), api.hide.end(), "../cli"), api.hide.end());
     EXPECT_NE(std::find(api.hide.begin(), api.hide.end(), "../toolkit"), api.hide.end());
     EXPECT_EQ(std::find(api.hide.begin(), api.hide.end(), "../web"), api.hide.end());
-    EXPECT_EQ(api.writable, (std::vector<std::string>{"../interfaces/schema"}));
+    // It writes the contract it owns, and its own deliverables; it reads every unit's deliverables.
+    EXPECT_EQ(api.writable, (std::vector<std::string>{"../interfaces/schema", "../deliverables/api"}));
+    EXPECT_NE(std::find(api.readable.begin(), api.readable.end(), "../deliverables"), api.readable.end());
     EXPECT_EQ(api.rules, (std::vector<std::string>{"Nothing is installed.", "The API is built with toolkit."}));
-    ASSERT_EQ(api.notes.size(), 2u);
+    ASSERT_EQ(api.notes.size(), 3u);
+    EXPECT_NE(api.notes[2].find("goes in ../deliverables/api/"), std::string::npos) << api.notes[2];
     EXPECT_NE(api.notes[1].find("x-as-a-service. Use what they provide"), std::string::npos) << api.notes[1];
     // After milestone 1 the collaboration ends: web is hidden too.
     UnitView later = unit_view(s, "api", 2, d.path());
@@ -101,8 +104,33 @@ TEST(OrgViews, BoundariesFollowTheInteractions) {
     UnitView toolkit = unit_view(s, "toolkit", 1, d.path());
     EXPECT_EQ(std::find(toolkit.hide.begin(), toolkit.hide.end(), "../api"), toolkit.hide.end());
     EXPECT_NE(std::find(toolkit.hide.begin(), toolkit.hide.end(), "../cli"), toolkit.hide.end());
-    ASSERT_EQ(toolkit.notes.size(), 1u);
+    ASSERT_EQ(toolkit.notes.size(), 2u);
     EXPECT_NE(toolkit.notes[0].find("They use what you provide"), std::string::npos);
+}
+
+TEST(OrgSpec, DeliverablesAreADirectoryInTheOrgOrNone) {
+    OrgSpec s = parse_org_spec(kOrg);
+    EXPECT_EQ(s.deliverables, "deliverables");  // the default
+    EXPECT_EQ(render_org_spec(s).find("deliverables:"), std::string::npos);
+    std::string other = kOrg;
+    other.replace(other.find("units:"), 6, "deliverables: out/\nunits:");
+    OrgSpec o = parse_org_spec(other);
+    EXPECT_EQ(o.deliverables, "out");
+    EXPECT_TRUE(check_org_spec(o).empty());
+    EXPECT_EQ(parse_org_spec(render_org_spec(o)).deliverables, "out");
+    EXPECT_EQ(unit_view(o, "web", 1).writable, (std::vector<std::string>{"../out/web"}));
+    std::string none = kOrg;
+    none.replace(none.find("units:"), 6, "deliverables: none\nunits:");
+    OrgSpec n = parse_org_spec(none);
+    EXPECT_EQ(n.deliverables, "");
+    EXPECT_TRUE(unit_view(n, "web", 1).writable.empty());
+    EXPECT_EQ(parse_org_spec(render_org_spec(n)).deliverables, "");
+    // Not a unit's directory, not outside the org, not in the contracts.
+    for (const char* bad : {"api", "../out", "interfaces/out", "/tmp/out"}) {
+        OrgSpec b = parse_org_spec(kOrg);
+        b.deliverables = bad;
+        EXPECT_FALSE(check_org_spec(b).empty()) << bad;
+    }
 }
 
 TEST(OrgInit, MakesACrewAndSyncMakesTheUnits) {
@@ -128,6 +156,10 @@ TEST(OrgInit, MakesACrewAndSyncMakesTheUnits) {
     myteam::Project unit = myteam::Project::open(d / "api");
     EXPECT_NE(unit.brief().find("The API is built with toolkit."), std::string::npos);
     EXPECT_NE(d.read(".myteam/config.yaml").find("readonly: [\"api\""), std::string::npos);
+    // A directory per unit for what it delivers, and the index of it.
+    EXPECT_TRUE(fs::is_directory(d / "deliverables/api"));
+    EXPECT_NE(d.read("deliverables/README.md").find("## api\n\nthe HTTP API.\n\nNothing yet."), std::string::npos)
+        << d.read("deliverables/README.md");
     // Nothing changes on a second sync.
     SyncResult again = sync_org(d.path(), 1);
     EXPECT_TRUE(again.created.empty());
@@ -189,6 +221,29 @@ TEST(OrgEngine, AMilestoneIsCommittedAndTagged) {
     auto conv = myteam::load_conversation(myteam::Project::open(d.path()));
     EXPECT_EQ(conv.back().text, "Milestone: The schema is drawn.");
     EXPECT_NE(d.read(".myorg/log/ticks.jsonl").find("\"reached_milestone\":true"), std::string::npos);
+}
+
+TEST(OrgDeliverables, OnlyTheDeliverablesAreCommittedWithTheirIndex) {
+    TempDir d, teams;
+    init_org(d.path(), {.team = crew_team(teams)});
+    identity(d.path());
+    d.write("ORG.md", kOrg);
+    ASSERT_TRUE(sync_org(d.path(), 1).problems.empty());
+    git(d.path(), {"add", "-A"});
+    git(d.path(), {"commit", "-q", "-m", "the org"});
+    EXPECT_TRUE(commit_deliverables(d.path()).empty());  // nothing new
+    d.write("deliverables/web/render/top.png", "png");
+    d.write("deliverables/web/.scratch/tmp", "x");  // hidden: not listed
+    d.write("PLAN.md", "---\nproject: suite\n---\n\n## Work\n\n- [ ] Something new\n");  // not a deliverable
+    EXPECT_EQ(commit_deliverables(d.path()), (std::vector<std::string>{"web"}));
+    EXPECT_EQ(list_deliverables(d.path(), parse_org_spec(kOrg))["web"], (std::vector<std::string>{"render/top.png"}));
+    EXPECT_NE(d.read("deliverables/README.md").find("- [render/top.png](web/render/top.png)"), std::string::npos);
+    std::string log, status;
+    git(d.path(), {"log", "-1", "--format=%an %s", "--name-only"}, &log);
+    EXPECT_NE(log.find("myorg Deliverables: web"), std::string::npos) << log;
+    EXPECT_NE(log.find("deliverables/README.md"), std::string::npos) << log;
+    git(d.path(), {"status", "--short", "PLAN.md"}, &status);
+    EXPECT_NE(status.find("M PLAN.md"), std::string::npos) << status;  // left as it was
 }
 
 TEST(OrgWatch, WhatNeedsYouIsSaidOnceAndReleasesAreRecorded) {

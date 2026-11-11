@@ -111,7 +111,12 @@ Tick Engine::tick() {
     }
     if (o_.dry_run) return t;
 
-    // 3. A milestone: everything at it, committed and tagged.
+    // 3. What the units delivered to the customer this step, in the org's repository (the
+    //    units' experts commit only in their own).
+    if (auto units = commit_deliverables(org_); !units.empty())
+        note("deliverables committed: " + myteam::join(units, ", "));
+
+    // 4. A milestone: everything at it, committed and tagged.
     if (s.milestone) {
         t.milestone = true;
         for (const auto& d : close_milestone(st)) note(d);

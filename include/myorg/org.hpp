@@ -85,6 +85,10 @@ struct OrgSpec {
     std::vector<Unit> units;
     std::vector<Interaction> interactions;
     std::vector<std::string> rules;  ///< for every unit, before its own
+    /// Where the org's results for the customer go (renders, layouts and fabrication files,
+    /// documentation, reports): a directory in the org, one subdirectory per unit, which only
+    /// that unit's experts write. Empty (`deliverables: none` in ORG.md): no such directory.
+    std::string deliverables = "deliverables";
     std::string body;  ///< ORG.md after the front matter
 
     const Unit* find(std::string_view handle) const;
@@ -145,6 +149,16 @@ struct SyncResult {
 /// Make the org match ORG.md: create missing units (a git repository with a myteam config, a
 /// submodule), and write each unit's view and the org's config.
 SyncResult sync_org(const fs::path& org_dir, int milestone, bool dry_run = false);
+
+/// The org's deliverables: for each unit, the files under deliverables/<unit>/ (paths
+/// relative to that directory, sorted). Empty when the org has no deliverables directory.
+std::map<std::string, std::vector<std::string>> list_deliverables(const fs::path& org_dir, const OrgSpec& spec);
+/// deliverables/README.md: what the directory is for, and the index of what is in it.
+std::string deliverables_readme(const OrgSpec& spec, const std::map<std::string, std::vector<std::string>>& files);
+/// Commit what changed under the deliverables directory, and only that, in the org's
+/// repository (the units' experts commit in their own repositories, not here). Returns the
+/// units whose deliverables changed; empty when nothing did.
+std::vector<std::string> commit_deliverables(const fs::path& org_dir);
 
 /// .myorg/state.json
 struct OrgState {

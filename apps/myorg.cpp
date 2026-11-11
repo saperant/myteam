@@ -416,6 +416,13 @@ int cmd_json(const Args& a) {
                 xs.push_back(j);
             }
             out.set("interactions", xs);
+            // What the units deliver to the customer (shapes are additive).
+            taskml::Json dl = taskml::Json::object();
+            dl.set("dir", spec.deliverables);
+            taskml::Json per = taskml::Json::object();
+            for (const auto& [unit, files] : list_deliverables(d, spec)) per.set(unit, strings_json(files));
+            dl.set("units", per);
+            out.set("deliverables", dl);
             myteam::CoachState cs = myteam::load_coach_state(p);
             taskml::Json c = taskml::Json::object();
             c.set("decisions", cs.decisions);

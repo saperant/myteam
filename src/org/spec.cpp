@@ -57,6 +57,8 @@ myteam::ProcessResult git(const fs::path& dir, std::vector<std::string> args, st
 
 bool is_repo_root(const fs::path& dir) { return fs::exists(dir / ".git"); }
 
+bool write_deliverables(const fs::path& org, const OrgSpec& spec);
+
 }  // namespace
 
 // --- interactions ---------------------------------------------------------------------
@@ -98,6 +100,11 @@ OrgSpec parse_org_spec(std::string_view text) {
     try {
         s.name = m.get("name");
         if (m["rules"].is_sequence()) s.rules = m["rules"].as_strings();
+        if (m.has("deliverables")) {
+            std::string d(trim(m.get("deliverables")));
+            while (!d.empty() && d.back() == '/') d.pop_back();
+            s.deliverables = (d == "none" || d == "false") ? "" : d;
+        }
         if (m["units"].is_mapping())
             for (const auto& [k, v] : m["units"].entries()) {
                 Unit u;
@@ -168,6 +175,15 @@ std::vector<std::string> check_org_spec(const OrgSpec& s) {
             starts_with(u.dir, "."))
             p.push_back("unit " + u.handle + ": dir must be a directory in the org");
     }
+    if (!s.deliverables.empty()) {
+        const std::string& d = s.deliverables;
+        if (d.find("..") != std::string::npos || d[0] == '/' || starts_with(d, "~") || starts_with(d, "."))
+            p.push_back("deliverables \"" + d + "\": a directory in the org (or none)");
+        for (const Unit& u : s.units)
+            if (u.dir == d || starts_with(d, u.dir + "/") || starts_with(u.dir, d + "/"))
+                p.push_back("deliverables \"" + d + "\" overlaps unit " + u.handle + "'s directory");
+        if (d == "interfaces" || starts_with(d, "interfaces/")) p.push_back("deliverables \"" + d + "\": not in interfaces/");
+    }
     for (const Interaction& x : s.interactions) {
         const std::string what = "interaction " + join(x.between, "–");
         if (x.between.size() != 2) p.push_back(what + ": between needs two units");
@@ -190,6 +206,9 @@ std::string render_org_spec(const OrgSpec& s) {
         o += "\n# What the org requires of every unit's work; each unit's rules: add its own.\nrules:\n";
         for (const auto& r : s.rules) o += "  - " + yq(r) + "\n";
     }
+    if (s.deliverables != "deliverables")
+        o += "\n# Where results for the customer go, one directory per unit (none: no such directory).\n"
+             "deliverables: " + (s.deliverables.empty() ? std::string("none") : s.deliverables) + "\n";
     o += "\n# The units: each a team from the catalog (myorg catalog) in its own directory and\n"
          "# git repository. type: stream-aligned | platform | complicated-subsystem | enabling\n";
     o += "units:\n";
@@ -314,6 +333,17 @@ UnitView unit_view(const OrgSpec& spec, std::string_view unit, int milestone, co
     for (const Unit& u : spec.units)
         if (visible.count(u.handle)) v.readable.push_back(up + u.dir);
     for (const auto& o : me->owns) v.writable.push_back(up + o);
+    if (!spec.deliverables.empty()) {
+        const std::string dir = up + spec.deliverables;
+        v.writable.push_back(dir + "/" + me->handle);
+        v.readable.push_back(dir);
+        v.notes.push_back("Deliverables: what the customer gets from your unit (renders, layouts and fabrication "
+                          "files, documentation, reports) goes in " + dir + "/" + me->handle +
+                          "/, named for what it is. Keep its sources in your repository and make it from them with "
+                          "a command you name, so it can be made again; name every deliverable you add or change in "
+                          "your delivery. myorg commits that directory; the other units' deliverables are in " + dir +
+                          "/ to read.");
+    }
     v.readable.insert(v.readable.end(), me->reads.begin(), me->reads.end());
     v.writable.insert(v.writable.end(), me->writes.begin(), me->writes.end());
     v.rules = spec.rules;
@@ -498,6 +528,10 @@ std::vector<std::string> init_org(const fs::path& dir, const InitOptions& o) {
         did.push_back("ORG.md");
     }
     fs::create_directories(dir / "interfaces");
+    if (OrgSpec spec = load_org_spec(dir); !spec.deliverables.empty()) {
+        write_deliverables(dir, spec);
+        did.push_back(spec.deliverables + "/ (what the org delivers to the customer)");
+    }
     if (!fs::exists(dir / "interfaces" / "README.md"))
         write_file_atomic(dir / "interfaces" / "README.md",
                           "# Interfaces\n\nThe contracts between the org's units: one directory per contract\n"
@@ -518,6 +552,93 @@ std::vector<std::string> init_org(const fs::path& dir, const InitOptions& o) {
                                                "\n---\n\n# The org\n\n## Work\n\n");
     did.push_back(".myorg/ and interfaces/");
     return did;
+}
+
+// --- deliverables ---------------------------------------------------------------------
+
+std::map<std::string, std::vector<std::string>> list_deliverables(const fs::path& org, const OrgSpec& spec) {
+    std::map<std::string, std::vector<std::string>> out;
+    if (spec.deliverables.empty()) return out;
+    for (const Unit& u : spec.units) {
+        auto& files = out[u.handle];
+        const fs::path d = org / spec.deliverables / u.handle;
+        std::error_code ec;
+        if (!fs::is_directory(d, ec)) continue;
+        for (auto it = fs::recursive_directory_iterator(d, ec); !ec && it != fs::recursive_directory_iterator(); it.increment(ec)) {
+            const fs::path rel = fs::relative(it->path(), d, ec);
+            bool hidden = false;
+            for (const auto& part : rel) hidden = hidden || starts_with(part.string(), ".");
+            if (hidden) {
+                if (it->is_directory(ec)) it.disable_recursion_pending();
+                continue;
+            }
+            if (it->is_regular_file(ec)) files.push_back(rel.generic_string());
+        }
+        std::sort(files.begin(), files.end());
+    }
+    return out;
+}
+
+std::string deliverables_readme(const OrgSpec& spec, const std::map<std::string, std::vector<std::string>>& files) {
+    std::string b = "# Deliverables\n\n"
+                    "What the org delivers to the customer: renders, layouts and fabrication files, documentation,\n"
+                    "reports. Each unit's experts write only their own directory, and make its files from the\n"
+                    "sources in the unit's repository, so they can be made again. myorg keeps this index and\n"
+                    "commits the directory; do not edit this file.\n";
+    for (const Unit& u : spec.units) {
+        b += "\n## " + u.handle + "\n\n";
+        if (!u.purpose.empty()) b += u.purpose + ".\n\n";
+        auto it = files.find(u.handle);
+        if (it == files.end() || it->second.empty()) {
+            b += "Nothing yet.\n";
+            continue;
+        }
+        for (const auto& f : it->second) b += "- [" + f + "](" + u.handle + "/" + f + ")\n";
+    }
+    return b;
+}
+
+namespace {
+/// deliverables/ and each unit's directory in it, and the index; whether the index changed.
+bool write_deliverables(const fs::path& org, const OrgSpec& spec) {
+    if (spec.deliverables.empty()) return false;
+    const fs::path d = org / spec.deliverables;
+    for (const Unit& u : spec.units) fs::create_directories(d / u.handle);
+    const std::string readme = deliverables_readme(spec, list_deliverables(org, spec));
+    if (try_read_file(d / "README.md").value_or("") == readme) return false;
+    write_file_atomic(d / "README.md", readme);
+    return true;
+}
+}  // namespace
+
+std::vector<std::string> commit_deliverables(const fs::path& org) {
+    std::vector<std::string> units;
+    OrgSpec spec;
+    try {
+        spec = load_org_spec(org);
+    } catch (const std::exception&) {
+        return units;
+    }
+    if (spec.deliverables.empty() || !is_repo_root(org)) return units;
+    write_deliverables(org, spec);
+    const std::string d = spec.deliverables;
+    git(org, {"add", "-A", "--", d});
+    std::string names;
+    git(org, {"diff", "--cached", "--name-only", "--", d}, &names);
+    std::set<std::string> changed;
+    for (const auto& l : myteam::split_lines(names)) {
+        std::string rest(trim(l));
+        if (!starts_with(rest, d + "/")) continue;
+        rest = rest.substr(d.size() + 1);
+        const auto slash = rest.find('/');
+        if (slash != std::string::npos && spec.find(rest.substr(0, slash))) changed.insert(rest.substr(0, slash));
+    }
+    if (names.find_first_not_of(" \n") == std::string::npos) return units;
+    units.assign(changed.begin(), changed.end());
+    const std::string msg = "Deliverables: " + (units.empty() ? std::string("the index") : join(units, ", "));
+    // Only the deliverables: whatever else is staged in the org stays as it is.
+    git(org, {"-c", "user.name=myorg", "-c", "user.email=myorg@myteam.invalid", "commit", "-q", "-m", msg, "--", d});
+    return units;
 }
 
 SyncResult sync_org(const fs::path& org, int milestone, bool dry) {
@@ -566,6 +687,7 @@ SyncResult sync_org(const fs::path& org, int milestone, bool dry) {
             r.problems.push_back(u.handle + "/.myteam/config.yaml: " + e.what());
         }
     }
+    if (write_deliverables(org, spec)) r.updated.push_back(spec.deliverables + "/: the index of what the units deliver");
     try {
         if (write_block(org / ".myteam" / "config.yaml", org_config_block(spec))) r.updated.push_back("the org: its units");
     } catch (const std::exception& e) {

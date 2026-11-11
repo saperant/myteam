@@ -38,6 +38,8 @@ suite/                        the org: a git repository, a myteam project (metho
   ORG.md                      units, interactions, rules; the body is the org's brief (the coach's)
   PLAN.md                     the crew's one task list
   interfaces/                 contracts between units (schemas, events, configuration)
+  deliverables/               what the org delivers to the customer: one directory per unit
+                              (renders, layouts, documentation, reports) and README.md, its index
   integration/                cross-repository checks (an expert's, in a unit that owns them)
   .myteam/                    the crew: config, team (or .myteam/teams/crew/), memory, skills, runs
   .myorg/config.yaml          myorg's settings
@@ -52,6 +54,7 @@ suite/                        the org: a git repository, a myteam project (metho
 ```yaml
 ---
 name: suite
+deliverables: deliverables          # the customer's results (the default; none: no such directory)
 rules:
   - "Nothing is installed: say what is missing in a blocker to the operator."
 units:
@@ -81,13 +84,26 @@ interfaces, the units it sees, its `reads`), `writable` (its `owns`, its
 `writes`), `rules`, and `notes` (who it works with, and how). The org's own
 block makes the units read-only to the coach's and the Gatekeeper's runs.
 
+### Deliverables
+
+Each unit's experts write `deliverables/<unit>/` (and read the whole directory): what the
+customer gets from the unit, such as renders, layouts and fabrication files, documentation for
+the customer, and reports. The unit's note says so. They keep the sources in their own repository
+and make the deliverables from them with a command they name, so the files can be made again, and
+they name each file they add or change in their delivery, where the Gatekeeper checks it. The
+experts commit only in their unit's repository, so myorg commits the directory: after each coach
+step it refreshes `deliverables/README.md` (the index, per unit) and commits what changed under
+`deliverables/`, and only that, as *Deliverables: <units>*. `myorg json` lists the files.
+`deliverables: DIR` in ORG.md moves the directory; `deliverables: none` turns it off.
+
 ## A tick (`myorg run`)
 
 1. The units' views from ORG.md, for the milestone the crew works toward.
 2. A coach step on the org (`myteam run`'s step, in-process): the ready
    expert tasks, the Gatekeeper's checks, the coach's decisions and the
    council (ARCHITECTURE.md, *The coach*).
-3. A milestone: commit, tag, and wait for you.
+3. The deliverables: the index refreshed and the changes under `deliverables/` committed.
+4. A milestone: commit, tag, and wait for you.
 
 It goes on until the crew waits for you (an `@operator` task, nothing to do,
 a milestone), `-n` ticks, or `.myorg/stop`. A rate limit is waited out

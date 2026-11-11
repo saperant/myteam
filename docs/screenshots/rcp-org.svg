@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2216 1124" font-family="Fira Code, DejaVu Sans Mono, monospace" font-size="20">
+<rect width="2216" height="1124" rx="8" fill="#292929" stroke="#444"/>
+<circle cx="20" cy="20" r="7" fill="#ff5f57"/><circle cx="42" cy="20" r="7" fill="#febc2e"/><circle cx="64" cy="20" r="7" fill="#28c840"/>
+<text x="1108" y="26" fill="#c5c8c6" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="bold">myorg — pantry</text>
+<rect x="10" y="40" width="2196.0" height="1073.6" fill="#1e1e1e"/>
+<rect x="10.0" y="40.0" width="195.8" height="25.0" fill="#11a8cd"/>
+<text x="22.2" y="58.5" fill="#1e1e1e" textLength="170.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">myteam ▸ myorg</text>
+<rect x="205.2" y="40.0" width="12.8" height="25.0" fill="#e0e0e0"/>
+<text x="229.6" y="58.5" fill="#e0e0e0" textLength="158.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">1 Org: pantry</text>
+<rect x="400.4" y="40.0" width="1123.0" height="25.0" fill="#e0e0e0"/>
+<text x="412.6" y="58.5" fill="#1e1e1e" textLength="122.0" lengthAdjust="spacingAndGlyphs">2 Topology</text>
+<text x="1510.6" y="58.5" fill="#1e1e1e" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<rect x="1522.8" y="40.0" width="159.2" height="25.0" fill="#11a8cd"/>
+<text x="1535.0" y="58.5" fill="#1e1e1e" textLength="134.2" lengthAdjust="spacingAndGlyphs" font-weight="bold">3 Units (3)</text>
+<rect x="1681.4" y="40.0" width="525.2" height="25.0" fill="#e0e0e0"/>
+<text x="1693.6" y="58.5" fill="#1e1e1e" textLength="146.4" lengthAdjust="spacingAndGlyphs">4 Properties</text>
+<text x="10.0" y="82.9" fill="#e0e0e0" textLength="73.2" lengthAdjust="spacingAndGlyphs" font-weight="bold">pantry</text>
+<text x="95.4" y="82.9" fill="#e0e0e0" textLength="634.4" lengthAdjust="spacingAndGlyphs">toward milestone 1 4 ticks, 6 coach decisions, $3.84</text>
+<text x="742.0" y="82.9" fill="#666666" textLength="280.6" lengthAdjust="spacingAndGlyphs">/var/home/me/src/pantry</text>
+<text x="1510.6" y="82.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<rect x="1522.8" y="64.4" width="683.8" height="25.0" fill="#e0e0e0"/>
+<text x="1535.0" y="82.9" fill="#1e1e1e" textLength="73.2" lengthAdjust="spacingAndGlyphs">pantry</text>
+<text x="1901.0" y="82.9" fill="#1e1e1e" textLength="292.8" lengthAdjust="spacingAndGlyphs">the crew&#x27;s work (myteam)</text>
+<text x="10.0" y="107.3" fill="#e5e510" textLength="573.4" lengthAdjust="spacingAndGlyphs">The Gatekeeper objects to the coach&#x27;s decisions</text>
+<text x="595.6" y="107.3" fill="#11a8cd" textLength="341.6" lengthAdjust="spacingAndGlyphs">2 news waiting for the coach</text>
+<text x="1510.6" y="107.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1535.0" y="107.3" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs">api</text>
+<text x="1998.6" y="107.3" fill="#666666" textLength="195.2" lengthAdjust="spacingAndGlyphs">platform · @aino</text>
+<text x="10.0" y="131.7" fill="#11a8cd" textLength="1500.6" lengthAdjust="spacingAndGlyphs">┌─ Units (3) ─────────────────────────────────────────────────────────────────────────────────────────────────────────────┐</text>
+<text x="1510.6" y="131.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1535.0" y="131.7" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs">web</text>
+<text x="1925.4" y="131.7" fill="#666666" textLength="268.4" lengthAdjust="spacingAndGlyphs">stream-aligned · @olli</text>
+<text x="10.0" y="156.1" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="22.2" y="156.1" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">Unit</text>
+<text x="180.8" y="156.1" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">Type</text>
+<text x="363.8" y="156.1" fill="#e0e0e0" textLength="85.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">Experts</text>
+<text x="620.0" y="156.1" fill="#e0e0e0" textLength="85.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">Purpose</text>
+<text x="1132.4" y="156.1" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">Sees</text>
+<text x="1425.2" y="156.1" fill="#e0e0e0" textLength="73.2" lengthAdjust="spacingAndGlyphs" font-weight="bold">Hidden</text>
+<text x="1498.4" y="156.1" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="156.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1535.0" y="156.1" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs">cli</text>
+<text x="1913.2" y="156.1" fill="#666666" textLength="280.6" lengthAdjust="spacingAndGlyphs">stream-aligned · @veera</text>
+<text x="10.0" y="180.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<rect x="22.2" y="162.0" width="1476.8" height="25.0" fill="#11a8cd"/>
+<text x="22.2" y="180.5" fill="#000000" textLength="36.6" lengthAdjust="spacingAndGlyphs">api</text>
+<text x="180.8" y="180.5" fill="#000000" textLength="97.6" lengthAdjust="spacingAndGlyphs">platform</text>
+<text x="363.8" y="180.5" fill="#000000" textLength="61.0" lengthAdjust="spacingAndGlyphs">@aino</text>
+<text x="620.0" y="180.5" fill="#000000" textLength="475.8" lengthAdjust="spacingAndGlyphs">the HTTP API: stock, donations, pickups</text>
+<text x="1132.4" y="180.5" fill="#000000" textLength="268.4" lengthAdjust="spacingAndGlyphs">interfaces, web, deliv</text>
+<text x="1486.2" y="180.5" fill="#000000" textLength="12.2" lengthAdjust="spacingAndGlyphs">1</text>
+<text x="1498.4" y="180.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="180.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="204.9" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="22.2" y="204.9" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">web</text>
+<text x="180.8" y="204.9" fill="#e0e0e0" textLength="244.0" lengthAdjust="spacingAndGlyphs">stream-aligned @olli</text>
+<text x="620.0" y="204.9" fill="#e0e0e0" textLength="280.6" lengthAdjust="spacingAndGlyphs">the volunteers&#x27; web app</text>
+<text x="1132.4" y="204.9" fill="#e0e0e0" textLength="268.4" lengthAdjust="spacingAndGlyphs">interfaces, api, deliv</text>
+<text x="1486.2" y="204.9" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">1</text>
+<text x="1498.4" y="204.9" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="204.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="229.3" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="22.2" y="229.3" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">cli</text>
+<text x="180.8" y="229.3" fill="#e0e0e0" textLength="256.2" lengthAdjust="spacingAndGlyphs">stream-aligned @veera</text>
+<text x="620.0" y="229.3" fill="#e0e0e0" textLength="427.0" lengthAdjust="spacingAndGlyphs">the warehouse&#x27;s command-line client</text>
+<text x="1132.4" y="229.3" fill="#e0e0e0" textLength="268.4" lengthAdjust="spacingAndGlyphs">interfaces, deliverabl</text>
+<text x="1486.2" y="229.3" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">2</text>
+<text x="1498.4" y="229.3" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="229.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="253.7" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1498.4" y="253.7" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="253.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="278.1" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1498.4" y="278.1" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="278.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="302.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1498.4" y="302.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="302.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="326.9" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1498.4" y="326.9" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="326.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="351.3" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1498.4" y="351.3" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="351.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="375.7" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1498.4" y="375.7" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="375.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="400.1" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1498.4" y="400.1" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="400.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="424.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1498.4" y="424.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="424.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="448.9" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1498.4" y="448.9" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="448.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="473.3" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1498.4" y="473.3" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="473.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="497.7" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1498.4" y="497.7" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="497.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="522.1" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1498.4" y="522.1" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="522.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="546.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1498.4" y="546.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="546.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="570.9" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1498.4" y="570.9" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="570.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="595.3" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1498.4" y="595.3" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="595.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="619.7" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1498.4" y="619.7" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="619.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="644.1" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1498.4" y="644.1" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1510.6" y="644.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="668.5" fill="#11a8cd" textLength="1500.6" lengthAdjust="spacingAndGlyphs">└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</text>
+<text x="1510.6" y="668.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="692.9" fill="#666666" textLength="24.4" lengthAdjust="spacingAndGlyphs">┌─</text>
+<text x="46.6" y="692.9" fill="#e0e0e0" textLength="500.2" lengthAdjust="spacingAndGlyphs" font-weight="bold">The org&#x27;s rules (every expert reads them)</text>
+<text x="559.0" y="692.9" fill="#666666" textLength="963.8" lengthAdjust="spacingAndGlyphs">─────────────────────────────────────────────────────────────────────────────┐│</text>
+<text x="10.0" y="717.3" fill="#666666" textLength="24.4" lengthAdjust="spacingAndGlyphs">│-</text>
+<text x="46.6" y="717.3" fill="#e0e0e0" textLength="597.8" lengthAdjust="spacingAndGlyphs">Every change to interfaces/api bumps its version.</text>
+<text x="1498.4" y="717.3" fill="#666666" textLength="24.4" lengthAdjust="spacingAndGlyphs">││</text>
+<text x="10.0" y="741.7" fill="#666666" textLength="24.4" lengthAdjust="spacingAndGlyphs">│-</text>
+<text x="46.6" y="741.7" fill="#e0e0e0" textLength="402.6" lengthAdjust="spacingAndGlyphs">Dates are ISO 8601 between units.</text>
+<text x="1498.4" y="741.7" fill="#666666" textLength="24.4" lengthAdjust="spacingAndGlyphs">││</text>
+<text x="10.0" y="766.1" fill="#666666" textLength="1512.8" lengthAdjust="spacingAndGlyphs">└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘│</text>
+<text x="10.0" y="790.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">t</text>
+<text x="34.4" y="790.5" fill="#666666" textLength="97.6" lengthAdjust="spacingAndGlyphs">one tick</text>
+<text x="168.6" y="790.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">r</text>
+<text x="193.0" y="790.5" fill="#666666" textLength="268.4" lengthAdjust="spacingAndGlyphs">run until it needs you</text>
+<text x="498.0" y="790.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">x</text>
+<text x="522.4" y="790.5" fill="#666666" textLength="244.0" lengthAdjust="spacingAndGlyphs">stop after this tick</text>
+<text x="803.0" y="790.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">s</text>
+<text x="827.4" y="790.5" fill="#666666" textLength="48.8" lengthAdjust="spacingAndGlyphs">sync</text>
+<text x="912.8" y="790.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">e</text>
+<text x="937.2" y="790.5" fill="#666666" textLength="134.2" lengthAdjust="spacingAndGlyphs">edit ORG.md</text>
+<text x="1108.0" y="790.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">w</text>
+<text x="1132.4" y="790.5" fill="#666666" textLength="292.8" lengthAdjust="spacingAndGlyphs">the crew&#x27;s work (myteam)</text>
+<text x="1461.8" y="790.5" fill="#11a8cd" textLength="48.8" lengthAdjust="spacingAndGlyphs">Ente</text>
+<text x="1510.6" y="790.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1522.8" y="790.5" fill="#11a8cd" textLength="61.0" lengthAdjust="spacingAndGlyphs">Enter</text>
+<text x="1596.0" y="790.5" fill="#666666" textLength="536.8" lengthAdjust="spacingAndGlyphs">the org: the myteam views; a unit: its brief</text>
+<rect x="10.0" y="796.4" width="12.8" height="25.0" fill="#e0e0e0"/>
+<rect x="22.2" y="796.4" width="195.8" height="25.0" fill="#11a8cd"/>
+<text x="34.4" y="814.9" fill="#1e1e1e" textLength="170.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">5 Org activity</text>
+<rect x="217.4" y="796.4" width="1989.2" height="25.0" fill="#e0e0e0"/>
+<text x="229.6" y="814.9" fill="#1e1e1e" textLength="122.0" lengthAdjust="spacingAndGlyphs">6 Problems</text>
+<text x="10.0" y="839.3" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">When</text>
+<text x="168.6" y="839.3" fill="#e0e0e0" textLength="109.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">Milestone</text>
+<text x="327.2" y="839.3" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">Cost</text>
+<text x="388.2" y="839.3" fill="#e0e0e0" textLength="158.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">What happened</text>
+<rect x="10.0" y="845.2" width="2196.6" height="25.0" fill="#e0e0e0"/>
+<text x="10.0" y="863.7" fill="#1e1e1e" textLength="122.0" lengthAdjust="spacingAndGlyphs">38 min ago</text>
+<text x="266.2" y="863.7" fill="#1e1e1e" textLength="12.2" lengthAdjust="spacingAndGlyphs">1</text>
+<text x="315.0" y="863.7" fill="#1e1e1e" textLength="878.4" lengthAdjust="spacingAndGlyphs">$0.81 the Gatekeeper objects: ^count has no criterion for an empty stock</text>
+<text x="10.0" y="888.1" fill="#e0e0e0" textLength="85.4" lengthAdjust="spacingAndGlyphs">3 h ago</text>
+<text x="266.2" y="888.1" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">1</text>
+<text x="315.0" y="888.1" fill="#e0e0e0" textLength="1012.6" lengthAdjust="spacingAndGlyphs">$1.98 ^stock-page by @olli: [?] review; the coach decided: ^server for the operator</text>
+<text x="10.0" y="912.5" fill="#e0e0e0" textLength="97.6" lengthAdjust="spacingAndGlyphs">21 h ago</text>
+<text x="266.2" y="912.5" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">1</text>
+<text x="315.0" y="912.5" fill="#e0e0e0" textLength="866.2" lengthAdjust="spacingAndGlyphs">$1.40 ^stock-api by @aino: [x] done; the Gatekeeper accepted ^stock-api</text>
+<text x="10.0" y="936.9" fill="#e0e0e0" textLength="146.4" lengthAdjust="spacingAndGlyphs">2026-11-10 1</text>
+<text x="266.2" y="936.9" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">1</text>
+<text x="315.0" y="936.9" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs">$0.83</text>
+<text x="388.2" y="936.9" fill="#e5e510" textLength="366.0" lengthAdjust="spacingAndGlyphs">the coach asked you a question</text>
+<text x="778.6" y="936.9" fill="#666666" textLength="902.8" lengthAdjust="spacingAndGlyphs">the coach decided: 4 tasks, 3 units; the Gatekeeper accepted the decisions</text>
+<rect x="10.0" y="1089.2" width="1659.8" height="25.0" fill="#e0e0e0"/>
+<rect x="1669.2" y="1089.2" width="37.2" height="25.0" fill="#11a8cd"/>
+<text x="1669.2" y="1107.7" fill="#1e1e1e" textLength="36.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">Tab</text>
+<rect x="1705.8" y="1089.2" width="98.2" height="25.0" fill="#e0e0e0"/>
+<text x="1718.0" y="1107.7" fill="#1e1e1e" textLength="61.0" lengthAdjust="spacingAndGlyphs">focus</text>
+<rect x="1803.4" y="1089.2" width="25.0" height="25.0" fill="#11a8cd"/>
+<text x="1803.4" y="1107.7" fill="#1e1e1e" textLength="24.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">F6</text>
+<rect x="1827.8" y="1089.2" width="110.4" height="25.0" fill="#e0e0e0"/>
+<text x="1840.0" y="1107.7" fill="#1e1e1e" textLength="73.2" lengthAdjust="spacingAndGlyphs">region</text>
+<rect x="1937.6" y="1089.2" width="25.0" height="25.0" fill="#11a8cd"/>
+<text x="1937.6" y="1107.7" fill="#1e1e1e" textLength="24.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">^P</text>
+<rect x="1962.0" y="1089.2" width="134.8" height="25.0" fill="#e0e0e0"/>
+<text x="1974.2" y="1107.7" fill="#1e1e1e" textLength="97.6" lengthAdjust="spacingAndGlyphs">commands</text>
+<rect x="2096.2" y="1089.2" width="25.0" height="25.0" fill="#11a8cd"/>
+<text x="2096.2" y="1107.7" fill="#1e1e1e" textLength="24.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">^Q</text>
+<rect x="2120.6" y="1089.2" width="86.0" height="25.0" fill="#e0e0e0"/>
+<text x="2132.8" y="1107.7" fill="#1e1e1e" textLength="48.8" lengthAdjust="spacingAndGlyphs">quit</text>
+</svg>

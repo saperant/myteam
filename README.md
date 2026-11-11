@@ -268,6 +268,35 @@ myteam json events RUN        # a run's events, while it runs too
 myorg json overview           # the units, what each sees, the interactions now
 ```
 
+### Screenshots
+
+A food bank's stock app (made up), a day into its first milestone: what needs you, who
+is working now and the latest runs, with the crew at the side:
+
+![The overview in the terminal workbench](docs/screenshots/rcp-overview.svg)
+
+The coach's desk: the Gatekeeper objects, so the coach's decision is held; the news the
+coach reads at its next decision, and its notes:
+
+![The coach's desk](docs/screenshots/rcp-coach.svg)
+
+The org in myorg's perspective: its units, their experts and what each sees:
+
+![The org in the terminal workbench](docs/screenshots/rcp-org.svg)
+
+The same in the GTK workbench (`MYRCP_GTK=1 myteam-ui`):
+
+![The overview in the GTK workbench](docs/screenshots/gtk-overview.png)
+
+![The org in the GTK workbench](docs/screenshots/gtk-org.png)
+
+More: [the plan](docs/screenshots/rcp-plan.svg), [you and the coach](docs/screenshots/rcp-customer.svg),
+[a run as it happens](docs/screenshots/rcp-run.svg), [the topology](docs/screenshots/rcp-topology.svg),
+and in GTK [the plan](docs/screenshots/gtk-plan.png), [the coach's desk](docs/screenshots/gtk-coach.png)
+and [the topology](docs/screenshots/gtk-topology.png). `tools/screenshots/make.sh` makes them
+again, from a made-up org in a sandbox (no agent runs: the crew's work is written as myteam
+would leave it).
+
 ## One crew across units (myorg)
 
 For a product made of several repositories (an API, a web front end, a

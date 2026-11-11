@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2216 1124" font-family="Fira Code, DejaVu Sans Mono, monospace" font-size="20">
+<rect width="2216" height="1124" rx="8" fill="#292929" stroke="#444"/>
+<circle cx="20" cy="20" r="7" fill="#ff5f57"/><circle cx="42" cy="20" r="7" fill="#febc2e"/><circle cx="64" cy="20" r="7" fill="#28c840"/>
+<text x="1108" y="26" fill="#c5c8c6" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="bold">myteam — pantry: the plan</text>
+<rect x="10" y="40" width="2196.0" height="1073.6" fill="#1e1e1e"/>
+<rect x="10.0" y="40.0" width="208.0" height="25.0" fill="#11a8cd"/>
+<text x="22.2" y="58.5" fill="#1e1e1e" textLength="183.0" lengthAdjust="spacingAndGlyphs" font-weight="bold">myteam ▸ myteam</text>
+<rect x="217.4" y="40.0" width="281.2" height="25.0" fill="#e0e0e0"/>
+<text x="241.8" y="58.5" fill="#1e1e1e" textLength="244.0" lengthAdjust="spacingAndGlyphs">1 myteam: pantry (2)</text>
+<text x="510.2" y="58.5" fill="#e0e0e0" textLength="122.0" lengthAdjust="spacingAndGlyphs" font-weight="bold">2 Plan (8)</text>
+<rect x="644.4" y="40.0" width="830.2" height="25.0" fill="#e0e0e0"/>
+<text x="656.6" y="58.5" fill="#1e1e1e" textLength="219.6" lengthAdjust="spacingAndGlyphs">3 Runs (2 running)</text>
+<text x="900.6" y="58.5" fill="#1e1e1e" textLength="341.6" lengthAdjust="spacingAndGlyphs">4 Customer (the coach wrote)</text>
+<text x="1266.6" y="58.5" fill="#1e1e1e" textLength="207.4" lengthAdjust="spacingAndGlyphs">5 Coach (the Gat│</text>
+<rect x="1474.0" y="40.0" width="159.2" height="25.0" fill="#11a8cd"/>
+<text x="1486.2" y="58.5" fill="#1e1e1e" textLength="134.2" lengthAdjust="spacingAndGlyphs" font-weight="bold">8 Crew Crew</text>
+<rect x="1632.6" y="40.0" width="574.0" height="25.0" fill="#e0e0e0"/>
+<text x="1644.8" y="58.5" fill="#1e1e1e" textLength="146.4" lengthAdjust="spacingAndGlyphs">9 Properties</text>
+<text x="10.0" y="82.9" fill="#666666" textLength="61.0" lengthAdjust="spacingAndGlyphs">Goal:</text>
+<text x="83.2" y="82.9" fill="#e0e0e0" textLength="1171.2" lengthAdjust="spacingAndGlyphs" font-weight="bold">Volunteers see the stock and log donations from a phone; the warehouse counts it from a terminal</text>
+<text x="1461.8" y="82.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1486.2" y="82.9" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">Role</text>
+<text x="1718.0" y="82.9" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">Unit</text>
+<text x="1888.8" y="82.9" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">Open</text>
+<text x="1962.0" y="82.9" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">Rev</text>
+<text x="2023.0" y="82.9" fill="#e0e0e0" textLength="85.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">Learned</text>
+<text x="2132.8" y="82.9" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">Runs</text>
+<text x="2193.8" y="82.9" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs" font-weight="bold">C</text>
+<text x="10.0" y="107.3" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">Task</text>
+<text x="729.8" y="107.3" fill="#e0e0e0" textLength="73.2" lengthAdjust="spacingAndGlyphs" font-weight="bold">Status</text>
+<text x="888.4" y="107.3" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">Who</text>
+<text x="1034.8" y="107.3" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">Pri</text>
+<text x="1095.8" y="107.3" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">Est</text>
+<text x="1461.8" y="107.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<rect x="1474.0" y="88.8" width="732.6" height="25.0" fill="#e0e0e0"/>
+<text x="1486.2" y="107.3" fill="#1e1e1e" textLength="146.4" lengthAdjust="spacingAndGlyphs">API engineer</text>
+<text x="1718.0" y="107.3" fill="#1e1e1e" textLength="36.6" lengthAdjust="spacingAndGlyphs">api</text>
+<text x="1925.4" y="107.3" fill="#1e1e1e" textLength="12.2" lengthAdjust="spacingAndGlyphs">2</text>
+<text x="1986.4" y="107.3" fill="#1e1e1e" textLength="12.2" lengthAdjust="spacingAndGlyphs">0</text>
+<text x="2096.2" y="107.3" fill="#1e1e1e" textLength="12.2" lengthAdjust="spacingAndGlyphs">1</text>
+<text x="2169.4" y="107.3" fill="#1e1e1e" textLength="36.6" lengthAdjust="spacingAndGlyphs">2 $</text>
+<rect x="10.0" y="113.2" width="1452.4" height="25.0" fill="#11a8cd"/>
+<text x="10.0" y="131.7" fill="#000000" textLength="390.4" lengthAdjust="spacingAndGlyphs">▼ Milestone 1: stock you can see</text>
+<text x="1461.8" y="131.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1486.2" y="131.7" fill="#11a8cd" textLength="61.0" lengthAdjust="spacingAndGlyphs">coach</text>
+<text x="1925.4" y="131.7" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">0</text>
+<text x="1986.4" y="131.7" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">0</text>
+<text x="2096.2" y="131.7" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">0</text>
+<text x="2169.4" y="131.7" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs">3 $</text>
+<text x="58.8" y="156.1" fill="#0dbc79" textLength="622.2" lengthAdjust="spacingAndGlyphs">The stock API: items, quantities, best-before dates</text>
+<text x="705.4" y="156.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">^</text>
+<text x="729.8" y="156.1" fill="#0dbc79" textLength="48.8" lengthAdjust="spacingAndGlyphs">done</text>
+<text x="888.4" y="156.1" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs">@aino</text>
+<text x="1034.8" y="156.1" fill="#e0e0e0" textLength="24.4" lengthAdjust="spacingAndGlyphs">p1</text>
+<text x="1095.8" y="156.1" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs">~4h</text>
+<text x="1169.0" y="156.1" fill="#e0e0e0" textLength="146.4" lengthAdjust="spacingAndGlyphs">2/2 criteria</text>
+<text x="1461.8" y="156.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1486.2" y="156.1" fill="#e0e0e0" textLength="97.6" lengthAdjust="spacingAndGlyphs">engineer</text>
+<text x="1925.4" y="156.1" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">0</text>
+<text x="1986.4" y="156.1" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">0</text>
+<text x="2096.2" y="156.1" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">0</text>
+<text x="2169.4" y="156.1" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">0</text>
+<text x="58.8" y="180.5" fill="#e0e0e0" textLength="170.8" lengthAdjust="spacingAndGlyphs">Log a donation</text>
+<text x="254.0" y="180.5" fill="#666666" textLength="122.0" lengthAdjust="spacingAndGlyphs">^donations</text>
+<text x="729.8" y="180.5" fill="#11a8cd" textLength="134.2" lengthAdjust="spacingAndGlyphs">in progress</text>
+<text x="888.4" y="180.5" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs">@aino</text>
+<text x="1034.8" y="180.5" fill="#e0e0e0" textLength="24.4" lengthAdjust="spacingAndGlyphs">p1</text>
+<text x="1095.8" y="180.5" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs">~3h</text>
+<text x="1169.0" y="180.5" fill="#e0e0e0" textLength="146.4" lengthAdjust="spacingAndGlyphs">1/2 criteria</text>
+<text x="1461.8" y="180.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1486.2" y="180.5" fill="#e5e510" textLength="122.0" lengthAdjust="spacingAndGlyphs">Gatekeeper</text>
+<text x="1925.4" y="180.5" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">0</text>
+<text x="1986.4" y="180.5" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">0</text>
+<text x="2096.2" y="180.5" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">0</text>
+<text x="2169.4" y="180.5" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs">3 $</text>
+<text x="58.8" y="204.9" fill="#e0e0e0" textLength="170.8" lengthAdjust="spacingAndGlyphs">The stock page</text>
+<text x="254.0" y="204.9" fill="#666666" textLength="134.2" lengthAdjust="spacingAndGlyphs">^stock-page</text>
+<text x="729.8" y="204.9" fill="#e5e510" textLength="73.2" lengthAdjust="spacingAndGlyphs">review</text>
+<text x="888.4" y="204.9" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs">@olli</text>
+<text x="1034.8" y="204.9" fill="#e0e0e0" textLength="24.4" lengthAdjust="spacingAndGlyphs">p1</text>
+<text x="1095.8" y="204.9" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs">~4h</text>
+<text x="1169.0" y="204.9" fill="#e0e0e0" textLength="146.4" lengthAdjust="spacingAndGlyphs">2/2 criteria</text>
+<text x="1461.8" y="204.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1486.2" y="204.9" fill="#e0e0e0" textLength="146.4" lengthAdjust="spacingAndGlyphs">web engineer</text>
+<text x="1718.0" y="204.9" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs">web</text>
+<text x="1925.4" y="204.9" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">2</text>
+<text x="1986.4" y="204.9" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">1</text>
+<text x="2096.2" y="204.9" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">1</text>
+<text x="2169.4" y="204.9" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs">1 $</text>
+<text x="58.8" y="229.3" fill="#e0e0e0" textLength="207.4" lengthAdjust="spacingAndGlyphs">The donation form</text>
+<text x="290.6" y="229.3" fill="#666666" textLength="170.8" lengthAdjust="spacingAndGlyphs">^donation-form</text>
+<text x="729.8" y="229.3" fill="#e0e0e0" textLength="85.4" lengthAdjust="spacingAndGlyphs">pending</text>
+<text x="888.4" y="229.3" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs">@olli</text>
+<text x="1034.8" y="229.3" fill="#e0e0e0" textLength="24.4" lengthAdjust="spacingAndGlyphs">p2</text>
+<text x="1095.8" y="229.3" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs">~3h</text>
+<text x="1169.0" y="229.3" fill="#e0e0e0" textLength="195.2" lengthAdjust="spacingAndGlyphs">after ^donations</text>
+<text x="1461.8" y="229.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1486.2" y="229.3" fill="#e0e0e0" textLength="146.4" lengthAdjust="spacingAndGlyphs">CLI engineer</text>
+<text x="1718.0" y="229.3" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs">cli</text>
+<text x="1925.4" y="229.3" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">1</text>
+<text x="1986.4" y="229.3" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">0</text>
+<text x="2096.2" y="229.3" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">0</text>
+<text x="2169.4" y="229.3" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">1</text>
+<text x="58.8" y="253.7" fill="#e0e0e0" textLength="451.4" lengthAdjust="spacingAndGlyphs">pantry count: the stock in a terminal</text>
+<text x="534.6" y="253.7" fill="#666666" textLength="73.2" lengthAdjust="spacingAndGlyphs">^count</text>
+<text x="729.8" y="253.7" fill="#11a8cd" textLength="134.2" lengthAdjust="spacingAndGlyphs">in progress</text>
+<text x="888.4" y="253.7" fill="#e0e0e0" textLength="73.2" lengthAdjust="spacingAndGlyphs">@veera</text>
+<text x="1034.8" y="253.7" fill="#e0e0e0" textLength="24.4" lengthAdjust="spacingAndGlyphs">p2</text>
+<text x="1095.8" y="253.7" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs">~2h</text>
+<text x="1169.0" y="253.7" fill="#e0e0e0" textLength="146.4" lengthAdjust="spacingAndGlyphs">0/2 criteria</text>
+<text x="1461.8" y="253.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="58.8" y="278.1" fill="#e0e0e0" textLength="390.4" lengthAdjust="spacingAndGlyphs">A test server for the volunteers</text>
+<text x="473.6" y="278.1" fill="#666666" textLength="85.4" lengthAdjust="spacingAndGlyphs">^server</text>
+<text x="729.8" y="278.1" fill="#e0e0e0" textLength="85.4" lengthAdjust="spacingAndGlyphs">pending</text>
+<text x="888.4" y="278.1" fill="#e0e0e0" textLength="109.8" lengthAdjust="spacingAndGlyphs">@operator</text>
+<text x="1034.8" y="278.1" fill="#e0e0e0" textLength="24.4" lengthAdjust="spacingAndGlyphs">p1</text>
+<text x="1461.8" y="278.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="302.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">▼</text>
+<text x="34.4" y="302.5" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs" font-weight="bold">Later</text>
+<text x="1461.8" y="302.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="58.8" y="326.9" fill="#e0e0e0" textLength="488.0" lengthAdjust="spacingAndGlyphs">Pickups: book a time to collect a parcel</text>
+<text x="571.2" y="326.9" fill="#666666" textLength="97.6" lengthAdjust="spacingAndGlyphs">^pickups</text>
+<text x="729.8" y="326.9" fill="#e0e0e0" textLength="85.4" lengthAdjust="spacingAndGlyphs">pending</text>
+<text x="888.4" y="326.9" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs">@aino</text>
+<text x="1034.8" y="326.9" fill="#e0e0e0" textLength="24.4" lengthAdjust="spacingAndGlyphs">p3</text>
+<text x="1461.8" y="326.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="58.8" y="351.3" fill="#e0e0e0" textLength="268.4" lengthAdjust="spacingAndGlyphs">Sign-in for volunteers</text>
+<text x="351.6" y="351.3" fill="#666666" textLength="97.6" lengthAdjust="spacingAndGlyphs">^sign-in</text>
+<text x="729.8" y="351.3" fill="#e0e0e0" textLength="85.4" lengthAdjust="spacingAndGlyphs">pending</text>
+<text x="888.4" y="351.3" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs">@olli</text>
+<text x="1034.8" y="351.3" fill="#e0e0e0" textLength="24.4" lengthAdjust="spacingAndGlyphs">p3</text>
+<text x="1461.8" y="351.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1461.8" y="375.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1461.8" y="400.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1461.8" y="424.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1461.8" y="448.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1461.8" y="473.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1461.8" y="497.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1461.8" y="522.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1461.8" y="546.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1461.8" y="570.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1461.8" y="595.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1461.8" y="619.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1461.8" y="644.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1461.8" y="668.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1461.8" y="692.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1461.8" y="717.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1461.8" y="741.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1461.8" y="766.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="790.5" fill="#11a8cd" textLength="61.0" lengthAdjust="spacingAndGlyphs">Enter</text>
+<text x="83.2" y="790.5" fill="#666666" textLength="219.6" lengthAdjust="spacingAndGlyphs">open in the editor</text>
+<text x="339.4" y="790.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">d</text>
+<text x="363.8" y="790.5" fill="#666666" textLength="329.4" lengthAdjust="spacingAndGlyphs">mark an @operator task done</text>
+<text x="729.8" y="790.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">D</text>
+<text x="754.2" y="790.5" fill="#666666" textLength="122.0" lengthAdjust="spacingAndGlyphs">decline it</text>
+<text x="912.8" y="790.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">h</text>
+<text x="937.2" y="790.5" fill="#666666" textLength="231.8" lengthAdjust="spacingAndGlyphs">hide finished tasks</text>
+<text x="1461.8" y="790.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1474.0" y="790.5" fill="#11a8cd" textLength="61.0" lengthAdjust="spacingAndGlyphs">Enter</text>
+<text x="1547.2" y="790.5" fill="#666666" textLength="207.4" lengthAdjust="spacingAndGlyphs">the member&#x27;s runs</text>
+<text x="1791.2" y="790.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">m</text>
+<text x="1815.6" y="790.5" fill="#666666" textLength="122.0" lengthAdjust="spacingAndGlyphs">its memory</text>
+<text x="1974.2" y="790.5" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">e</text>
+<text x="1998.6" y="790.5" fill="#666666" textLength="183.0" lengthAdjust="spacingAndGlyphs">its role prompt</text>
+<rect x="10.0" y="796.4" width="12.8" height="25.0" fill="#e0e0e0"/>
+<rect x="22.2" y="796.4" width="159.2" height="25.0" fill="#11a8cd"/>
+<text x="34.4" y="814.9" fill="#1e1e1e" textLength="134.2" lengthAdjust="spacingAndGlyphs" font-weight="bold">10 Activity</text>
+<rect x="180.8" y="796.4" width="2025.8" height="25.0" fill="#e0e0e0"/>
+<text x="193.0" y="814.9" fill="#1e1e1e" textLength="134.2" lengthAdjust="spacingAndGlyphs">11 Problems</text>
+<text x="10.0" y="839.3" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">When</text>
+<text x="217.4" y="839.3" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">What</text>
+<text x="1400.8" y="839.3" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">Who</text>
+<text x="1632.6" y="839.3" fill="#e0e0e0" textLength="73.2" lengthAdjust="spacingAndGlyphs" font-weight="bold">Result</text>
+<rect x="10.0" y="845.2" width="2196.6" height="25.0" fill="#e0e0e0"/>
+<text x="10.0" y="863.7" fill="#1e1e1e" textLength="85.4" lengthAdjust="spacingAndGlyphs">3 h ago</text>
+<text x="217.4" y="863.7" fill="#1e1e1e" textLength="341.6" lengthAdjust="spacingAndGlyphs">The stock page (^stock-page)</text>
+<text x="1400.8" y="863.7" fill="#1e1e1e" textLength="146.4" lengthAdjust="spacingAndGlyphs">Olli (@olli)</text>
+<text x="1632.6" y="863.7" fill="#1e1e1e" textLength="122.0" lengthAdjust="spacingAndGlyphs">[?] review</text>
+<text x="1913.2" y="863.7" fill="#1e1e1e" textLength="97.6" lengthAdjust="spacingAndGlyphs">1 commit</text>
+<text x="10.0" y="888.1" fill="#e0e0e0" textLength="97.6" lengthAdjust="spacingAndGlyphs">21 h ago</text>
+<text x="217.4" y="888.1" fill="#e0e0e0" textLength="317.2" lengthAdjust="spacingAndGlyphs">The stock API (^stock-api)</text>
+<text x="1400.8" y="888.1" fill="#e0e0e0" textLength="146.4" lengthAdjust="spacingAndGlyphs">Aino (@aino)</text>
+<text x="1632.6" y="888.1" fill="#0dbc79" textLength="256.2" lengthAdjust="spacingAndGlyphs">[x] done (accepted by</text>
+<text x="1913.2" y="888.1" fill="#e0e0e0" textLength="97.6" lengthAdjust="spacingAndGlyphs">1 commit</text>
+<rect x="10.0" y="1089.2" width="1659.8" height="25.0" fill="#e0e0e0"/>
+<rect x="1669.2" y="1089.2" width="37.2" height="25.0" fill="#11a8cd"/>
+<text x="1669.2" y="1107.7" fill="#1e1e1e" textLength="36.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">Tab</text>
+<rect x="1705.8" y="1089.2" width="98.2" height="25.0" fill="#e0e0e0"/>
+<text x="1718.0" y="1107.7" fill="#1e1e1e" textLength="61.0" lengthAdjust="spacingAndGlyphs">focus</text>
+<rect x="1803.4" y="1089.2" width="25.0" height="25.0" fill="#11a8cd"/>
+<text x="1803.4" y="1107.7" fill="#1e1e1e" textLength="24.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">F6</text>
+<rect x="1827.8" y="1089.2" width="110.4" height="25.0" fill="#e0e0e0"/>
+<text x="1840.0" y="1107.7" fill="#1e1e1e" textLength="73.2" lengthAdjust="spacingAndGlyphs">region</text>
+<rect x="1937.6" y="1089.2" width="25.0" height="25.0" fill="#11a8cd"/>
+<text x="1937.6" y="1107.7" fill="#1e1e1e" textLength="24.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">^P</text>
+<rect x="1962.0" y="1089.2" width="134.8" height="25.0" fill="#e0e0e0"/>
+<text x="1974.2" y="1107.7" fill="#1e1e1e" textLength="97.6" lengthAdjust="spacingAndGlyphs">commands</text>
+<rect x="2096.2" y="1089.2" width="25.0" height="25.0" fill="#11a8cd"/>
+<text x="2096.2" y="1107.7" fill="#1e1e1e" textLength="24.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">^Q</text>
+<rect x="2120.6" y="1089.2" width="86.0" height="25.0" fill="#e0e0e0"/>
+<text x="2132.8" y="1107.7" fill="#1e1e1e" textLength="48.8" lengthAdjust="spacingAndGlyphs">quit</text>
+</svg>
